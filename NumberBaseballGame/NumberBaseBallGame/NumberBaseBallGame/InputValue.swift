@@ -13,8 +13,8 @@ struct InputValue {
         var inputInt = [Int]()
         
         while true {
-            print("숫자를 입력하세요 🔢")
-            guard let input = readLine(), !input.isEmpty else {
+            print("세자리 숫자를 입력하세요 🔢")
+            guard let input = readLine(), !input.isEmpty, input.count == 3 else {
                 print("올바르지 않은 입력값입니다 🤔\n")
                 continue
             }
@@ -22,7 +22,7 @@ struct InputValue {
             inputInt = input.compactMap{ Int(String($0)) }
             
             // input의 길이가 3이 아니거나 0이 포함되면
-            guard inputInt.count == 3, Set(inputInt).count == 3, inputInt[0] != 0 else {
+            guard Set(inputInt).count == 3, inputInt[0] != 0 else {
                 print("올바르지 않은 입력값입니다 🤔\n")
                 continue
             }
