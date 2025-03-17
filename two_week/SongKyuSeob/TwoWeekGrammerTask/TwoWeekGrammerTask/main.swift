@@ -19,3 +19,11 @@ firstQuestion.calculate(num1: 10, num2: 5) { a, b in
 let secondQuestion = SecondQuestion()
 
 print(secondQuestion.myMap([1, 2, 3, 4, 5], { String($0) }))
+
+// MARK: - 필수 문제 3
+let thirdQuestion = ThirdQuestion()
+
+print(thirdQuestion.removeEvenNum([1, 2, 3, 4, 5]))
+//print(thirdQuestion.removeEvenString(["가", "나", "다", "라", "마"]))
+//print(thirdQuestion.removeEven([1,2,3,4,5,6,7]))
+//print(thirdQuestion.removeEven(["가", "나", "다", "라", "마", "바", "사"]))
