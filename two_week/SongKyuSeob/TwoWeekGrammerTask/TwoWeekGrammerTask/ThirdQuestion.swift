@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol Numbers {
+    var intValue: Int? { get }
+}
+
 class ThirdQuestion {
     
     func removeEvenNum(_ array: [Int]) -> [Int] {
@@ -47,6 +51,35 @@ class ThirdQuestion {
         return result
     }
     
+    func removeEvenWithNumbers<T: Numbers> (_ array: [T]) -> [T] {
+        let result = array.enumerated().compactMap { (index, element) in
+            return index % 2 == 0 ? element : nil
+        }
+        
+        return result
+    }
     
+    func printNumbers(numbers: [Numbers]) {
+        let values = numbers.compactMap { $0.intValue }
+        
+        print(values)
+    }
+    
+}
+
+struct Number<T>: Numbers {
+    
+    var num: T?
+    
+    var intValue: Int? {
+        if let doubleValue = num as? Double {
+            return Int(doubleValue)
+        } else if let floatValue = num as? Float {
+            return Int(floatValue)
+        } else if let intValue = num as? Int {
+            return intValue
+        }
+        return nil
+    }
     
 }
