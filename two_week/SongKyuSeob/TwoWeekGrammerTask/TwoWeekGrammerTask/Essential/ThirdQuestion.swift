@@ -40,9 +40,20 @@ class ThirdQuestion {
     
     // 위 함수들을 제네릭을 이용해 타입을 유연하게 하여 하나의 함수로 대체
     func removeEven<T> (_ array: [T]) -> [T] {
+        
+        guard !array.isEmpty else {
+            print("빈 배열이 입력되었습니다") // 빈 배열에 대한 예외 처리 1
+            return []
+        }
+        
         var result: [T] = []
         
         for i in 1...array.count {
+            guard i-1 < array.count else {
+                print("배열 인덱스 범위를 초과했습니다.")
+                break
+            }
+            
             if i % 2 != 0 {
                 result.append(array[i-1])
             }
@@ -52,6 +63,12 @@ class ThirdQuestion {
     }
     
     func removeEvenWithNumbers<T: Numbers> (_ array: [T]) -> [T] {
+        
+        guard !array.isEmpty else {
+            print("빈 배열이 입력되었습니다")
+            return []
+        }
+        
         let result = array.enumerated().compactMap { (index, element) in
             return index % 2 == 0 ? element : nil
         }
@@ -71,7 +88,7 @@ struct Number<T>: Numbers {
     
     var num: T?
     
-    var intValue: Int? {
+    var intValue: Int? { // Float, Double의 실수도 정수로 반환
         if let doubleValue = num as? Double {
             return Int(doubleValue)
         } else if let floatValue = num as? Float {
@@ -79,7 +96,7 @@ struct Number<T>: Numbers {
         } else if let intValue = num as? Int {
             return intValue
         }
-        return nil
+        return nil // 그 외 String 같은 상황이 올 때 nil 반환 (예외 처리 2)
     }
     
 }
