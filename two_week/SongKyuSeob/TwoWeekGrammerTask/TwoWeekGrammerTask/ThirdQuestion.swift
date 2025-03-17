@@ -22,8 +22,16 @@ class ThirdQuestion {
         return result
     }
     
-   
-    
-    
+    func removeEvenString(_ array: [String]) -> [String] {
+        var result: [String] = []
+        
+        for i in 1...array.count {
+            if i % 2 != 0 {
+                result.append(array[i-1])
+            }
+        }
+        
+        return result
+    }
     
 }
