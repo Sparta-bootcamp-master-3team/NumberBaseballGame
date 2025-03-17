@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: Engine
 private class Engine {
     var engineType: String {
         return "일반"
@@ -25,6 +26,7 @@ private class HydrogenEngine: Engine {
     }
 }
 
+// MARK: Car
 private class Car {
     let brand: String
     let model: String
@@ -59,10 +61,12 @@ private class HybridCar: Car {
     }
 }
 
+// MARK: 인스턴스 생성
 private let hybridCar = HybridCar(brand: "현대", model: "제네시스", year: "25년", engine: HydrogenEngine())
 
 func problem4Result() {
-    print(hybridCar.engine.engineType)
+    print("도전 문제 1")
+    print("변경 전 엔진 - \(hybridCar.engine.engineType)")
     hybridCar.switchEngine(to: ElectricEngine())
-    print(hybridCar.engine.engineType)
+    print("변경 후 엔진 - \(hybridCar.engine.engineType)")
 }
