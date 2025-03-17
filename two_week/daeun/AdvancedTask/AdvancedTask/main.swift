@@ -7,5 +7,6 @@
 
 import Foundation
 
-print("Hello, World!")
+let sum: (Int, Int) -> String = { "두 수의 합은 \($0 + $1)입니다." }
 
+print(sum(1, 2))
