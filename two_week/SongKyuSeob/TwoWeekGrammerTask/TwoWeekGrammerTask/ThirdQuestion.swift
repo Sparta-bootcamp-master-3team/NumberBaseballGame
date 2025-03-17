@@ -34,4 +34,19 @@ class ThirdQuestion {
         return result
     }
     
+    // 위 함수들을 제네릭을 이용해 타입을 유연하게 하여 하나의 함수로 대체
+    func removeEven<T> (_ array: [T]) -> [T] {
+        var result: [T] = []
+        
+        for i in 1...array.count {
+            if i % 2 != 0 {
+                result.append(array[i-1])
+            }
+        }
+        
+        return result
+    }
+    
+    
+    
 }
