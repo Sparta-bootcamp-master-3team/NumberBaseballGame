@@ -13,6 +13,12 @@ private class Engine {
     }
 }
 
+private class ElectricEngine: Engine {
+    override var engineType: String {
+        return "전기"
+    }
+}
+
 private class Car {
     let brand: String
     let model: String
@@ -28,5 +34,11 @@ private class Car {
     
     func drive() {
         print("\(brand) \(model) 주행중")
+    }
+}
+
+private class ElectricCar: Car {
+    init(brand: String, model: String, year: String, engine: ElectricEngine) {
+        super.init(brand: brand, model: model, year: year, engine: engine)
     }
 }
