@@ -5,8 +5,7 @@
 //  Created by 곽다은 on 3/17/25.
 //
 
-import Foundation
-
+// 필수 문제 1
 let sum: (Int, Int) -> String = { "두 수의 합은 \($0 + $1)입니다." }
 
 func calculate(_ operate: (Int, Int) -> String) {
@@ -14,3 +13,12 @@ func calculate(_ operate: (Int, Int) -> String) {
 }
 
 calculate(sum)
+
+// 필수 문제 2
+let numbers = [1, 2, 3, 4, 5]
+
+var result = [String]()
+
+numbers.forEach { number in
+    result.append(String(number))
+}
