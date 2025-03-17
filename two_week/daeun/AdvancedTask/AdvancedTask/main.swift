@@ -28,3 +28,16 @@ let input = [1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10]
 let output = input.filter { $0 % 2 == 0 }.map { String($0) }
 
 print(output)
+
+func myMap(_ array: [Int], _ convert: (Int) -> String) -> [String] {
+    var convertedArray: [String] = []
+    convertedArray.reserveCapacity(array.count)
+    array.forEach { convertedArray.append(convert($0)) }
+    return convertedArray
+}
+
+let myMapResult = myMap([1, 2, 3, 4, 5]) {
+    String($0)
+}
+
+print(myMapResult)
