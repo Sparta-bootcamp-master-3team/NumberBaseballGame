@@ -16,4 +16,6 @@ firstQuestion.calculate(num1: 10, num2: 5) { a, b in
 }
 
 // MARK: - 필수 문제 2
+let secondQuestion = SecondQuestion()
 
+print(secondQuestion.myMap([1, 2, 3, 4, 5], { String($0) }))
