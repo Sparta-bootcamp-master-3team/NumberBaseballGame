@@ -7,10 +7,4 @@
 
 import Foundation
 
-let sum: ((Int, Int) -> String) = { "두수의 합은 \($0 + $1) 입니다."}
-
-func calculate(sum: ((Int, Int) -> String)) {
-    print(sum(10, 20))
-}
-
-calculate(sum: sum)
+problem1Reulst() // 필수 문제 1 결과 실행
