@@ -14,6 +14,7 @@ func calculate(_ operate: (Int, Int) -> String) {
 
 calculate(sum)
 
+
 // 필수 문제 2
 let numbers = [1, 2, 3, 4, 5]
 
@@ -41,3 +42,14 @@ let myMapResult = myMap([1, 2, 3, 4, 5]) {
 }
 
 print(myMapResult)
+
+
+// 필수 문제 3
+func a(_ array: [Int]) -> [Int] {
+    return array
+        .enumerated()
+        .filter{ $0.offset % 2 == 0}
+        .map { $0.element }
+}
+
+print(a([1, 2, 3, 4, 5]))
