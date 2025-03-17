@@ -62,3 +62,10 @@ func b(_ array: [String]) -> [String] {
 }
 
 print(b(["가", "나", "다", "라", "마"]))
+
+func c<T>(_ array: [T]) -> [T] {
+    return array
+        .enumerated()
+        .filter{ $0.offset % 2 == 0}
+        .map { $0.element }
+}
