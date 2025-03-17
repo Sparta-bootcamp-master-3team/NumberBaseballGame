@@ -9,4 +9,8 @@ import Foundation
 
 let sum: ((Int, Int) -> String) = { "두수의 합은 \($0 + $1) 입니다."}
 
-print(sum(10, 20))
+func calculate(sum: ((Int, Int) -> String)) {
+    print(sum(10, 20))
+}
+
+calculate(sum: sum)
