@@ -26,17 +26,35 @@ import Foundation
 //private let result = b(strings)
 
 // MARK: 3. 제네릭 함수 구현
+//private let numbers = [1, 2, 3, 4, 5]
+//private let strings = ["가", "나", "다", "라", "마"]
+//
+//private func c<T>(_ inputs: [T]) -> [T] {
+//    inputs.indices.filter { $0 % 2 == 0 }.map { inputs[$0] }
+//}
+//
+//private let numberResult = c(numbers)
+//private let stringResult = c(strings)
+//
+//func problem3Result() {
+//    print(numberResult)
+//    print(stringResult)
+//}
+
+// MARK: 4. Numbers 프로토콜
+protocol Numbers { }
+extension Int: Numbers { }
+
 private let numbers = [1, 2, 3, 4, 5]
 private let strings = ["가", "나", "다", "라", "마"]
 
-private func c<T>(_ inputs: [T]) -> [T] {
+private func d<T: Numbers>(_ inputs: [T]) -> [T] {
     inputs.indices.filter { $0 % 2 == 0 }.map { inputs[$0] }
 }
 
-private let numberResult = c(numbers)
-private let stringResult = c(strings)
+private let numberResult = d(numbers)
+//private let stringResult = c(strings) // 에러 발생
 
 func problem3Result() {
     print(numberResult)
-    print(stringResult)
 }
