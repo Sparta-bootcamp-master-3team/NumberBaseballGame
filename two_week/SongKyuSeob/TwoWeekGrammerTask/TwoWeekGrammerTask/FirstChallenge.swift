@@ -11,7 +11,7 @@ class Car {
     let brand: String
     let model: String
     let modelYear: String
-    let engine: Engine
+    var engine: Engine
     
     init(brand: String, model: String, modelYear: String, engine: Engine) {
         self.brand = brand
@@ -25,10 +25,36 @@ class Car {
     }
     
     func stop() {
-        print("멈춰 !")
+        print("Car 멈..춤....")
+    }
+}
+
+class ElectricCar: Car {
+    override init(brand: String, model: String, modelYear: String, engine: Engine) {
+        let electricEngine = ElectricEngine()
+        super.init(brand: brand, model: model, modelYear: modelYear, engine: electricEngine)
+    }
+}
+
+class HybridCar: Car {
+    override init(brand: String, model: String, modelYear: String, engine: Engine) {
+        let hydrogenEngine = HydrogenEngine()
+        super.init(brand: brand, model: model, modelYear: modelYear, engine: hydrogenEngine)
+    }
+    
+    func switchEngine(to: Engine) {
+        self.engine = to
     }
 }
 
 class Engine {
+    
+}
+
+class ElectricEngine: Engine {
+    
+}
+
+class HydrogenEngine: Engine {
     
 }
