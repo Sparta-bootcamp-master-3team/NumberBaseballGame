@@ -39,3 +39,17 @@ let firstExample: [Number] = [
 
 let filteredNumbers = thirdQuestion.removeEvenWithNumbers(firstExample)
 thirdQuestion.printNumbers(numbers: filteredNumbers)
+
+// MARK: - 도전 문제 1
+
+let engine = Engine()
+let car = Car(brand: "Hyundai", model: "Genesis G80", modelYear: "2020", engine: engine)
+car.drive()
+
+let electricEngine = ElectricEngine()
+let eletricCar = ElectricCar(brand: "Tesla", model: "Tesla Model S", modelYear: "2013", engine: electricEngine)
+eletricCar.drive()
+
+let hydrogenEngine = HydrogenEngine()
+let hybridCar = HybridCar(brand: "Mercedes-Benz", model: "S-class", modelYear: "2020", engine: hydrogenEngine)
+hybridCar.switchEngine(to: electricEngine)

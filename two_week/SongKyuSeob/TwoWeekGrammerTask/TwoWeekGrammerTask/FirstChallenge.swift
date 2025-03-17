@@ -34,6 +34,11 @@ class ElectricCar: Car {
         let electricEngine = ElectricEngine()
         super.init(brand: brand, model: model, modelYear: modelYear, engine: electricEngine)
     }
+    
+    override func drive() {
+        super.drive()
+        print("전기차라 소음이 적네..")
+    }
 }
 
 class HybridCar: Car {
@@ -44,17 +49,14 @@ class HybridCar: Car {
     
     func switchEngine(to: Engine) {
         self.engine = to
+        
+        print("엔진을 변경합니다.")
     }
+
 }
 
-class Engine {
-    
-}
+class Engine { }
 
-class ElectricEngine: Engine {
-    
-}
+class ElectricEngine: Engine { }
 
-class HydrogenEngine: Engine {
-    
-}
+class HydrogenEngine: Engine { }
