@@ -22,3 +22,9 @@ var result = [String]()
 numbers.forEach { number in
     result.append(String(number))
 }
+
+
+let input = [1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10]
+let output = input.filter { $0 % 2 == 0 }.map { String($0) }
+
+print(output)
