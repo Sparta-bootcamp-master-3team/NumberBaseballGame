@@ -5,6 +5,7 @@
 //  Created by 곽다은 on 3/17/25.
 //
 
+// MARK: Car
 class Car {
     var brand: String
     var model: String
@@ -27,18 +28,21 @@ class Car {
     }
 }
 
+// MARK: ElectricCar
 final class ElectricCar: Car {
     init(brand: String, model: String, year: String, engine: ElectricEngine) {
         super.init(brand: brand, model: model, year: year, engine: engine)
     }
 }
 
+// MARK: HybridCar
 final class HybridCar: Car {
     func switchEngine(to engine: Engine) {
         self.engine = engine
     }
 }
 
+// MARK: - test function
 func testSwitchEngine() {
     print("-- switchEngine(to:): Electric engine -> Hydrogen engine --")
     

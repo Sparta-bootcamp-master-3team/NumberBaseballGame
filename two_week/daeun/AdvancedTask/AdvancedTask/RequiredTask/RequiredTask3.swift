@@ -5,6 +5,7 @@
 //  Created by 곽다은 on 3/18/25.
 //
 
+// MARK: a
 func testFilterEvenIndexedIntegers() {
     print("-- Filter Even Indexed Integers --")
     
@@ -22,6 +23,7 @@ func testFilterEvenIndexedIntegers() {
     print()
 }
 
+// MARK: b
 func testFilterEvenIndexedStrings() {
     print("-- Filter Even Indexed Strings --")
     
@@ -39,6 +41,7 @@ func testFilterEvenIndexedStrings() {
     print()
 }
 
+// MARK: c
 func testFilterEvenIndexedGeneric() {
     print("-- Filter Even Indexed Generic --")
     
@@ -50,24 +53,26 @@ func testFilterEvenIndexedGeneric() {
     }
     
     let input1 = [1, 2, 3, 4, 5]
-    let input2 = ["가", "나", "다", "라", "마"]
-    
     print("input: \(input1)")
     print("output: \(c(input1))")
     print()
     
+    let input2 = ["가", "나", "다", "라", "마"]
     print("input: \(input2)")
     print("output: \(c(input2))")
     print()
 }
 
-
+// MARK: d
 func testFilterEvenIndexedNumbersOnly() {
     print("-- Filter Even Indexed Numbers Only --")
+    
+    // Numbers protocol 정의
     protocol Numbers {
         var stringValue: String { get }
     }
     
+    // Numbers를 준수하는 샘플 열거형 정의
     enum Roman: Numbers {
         case one, two, three
         
@@ -80,6 +85,7 @@ func testFilterEvenIndexedNumbersOnly() {
         }
     }
     
+    // 과제 구현부
     func d<T: Numbers>(_ array: [T]) -> [T] {
         return array
             .enumerated()

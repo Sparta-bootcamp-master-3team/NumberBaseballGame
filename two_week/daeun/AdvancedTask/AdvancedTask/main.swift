@@ -14,6 +14,7 @@ testForInForEach()
 testHighOrderFunctionChaining()
 testCreateCustomHigherOrderFunction()
 
+
 // 필수 문제 3
 testFilterEvenIndexedIntegers()
 testFilterEvenIndexedStrings()

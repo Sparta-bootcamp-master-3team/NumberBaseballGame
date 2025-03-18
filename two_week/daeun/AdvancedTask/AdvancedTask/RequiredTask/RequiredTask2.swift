@@ -5,6 +5,7 @@
 //  Created by 곽다은 on 3/18/25.
 //
 
+// MARK: for-in forEach
 func testForInForEach() {
     print("-- for-in ForEach --")
     
@@ -25,6 +26,7 @@ func testForInForEach() {
     print()
 }
 
+// MARK: higher order function
 func testHighOrderFunctionChaining() {
     print("-- Higher Order Function Chaining --")
     
@@ -36,9 +38,11 @@ func testHighOrderFunctionChaining() {
     print()
 }
 
+// MARK: custom higher order function
 func testCreateCustomHigherOrderFunction() {
     print("-- Create Custom Higher Order Function: myMap --")
     
+    // myMap 정의
     func myMap(_ array: [Int], _ convert: (Int) -> String) -> [String] {
         var convertedArray: [String] = []
         convertedArray.reserveCapacity(array.count)
@@ -46,6 +50,7 @@ func testCreateCustomHigherOrderFunction() {
         return convertedArray
     }
 
+    // 결과값
     let myMapResult = myMap([1, 2, 3, 4, 5]) {
         String($0)
     }
