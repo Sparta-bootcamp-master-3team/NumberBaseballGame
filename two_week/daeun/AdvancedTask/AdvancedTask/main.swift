@@ -79,3 +79,6 @@ func d<T: Numbers>(_ array: [T]) -> [T] {
         .filter{ $0.offset % 2 == 0}
         .map { $0.element }
 }
+
+
+// 도전 문제 1
