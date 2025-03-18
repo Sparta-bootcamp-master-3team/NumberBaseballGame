@@ -27,7 +27,7 @@
 		C9CE8E062D89190400F87A36 /* Exceptions for "AdvancedTask" folder in "RequiredTask2Tests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				RequiredTask2.swift,
+				RequiredTask/RequiredTask2.swift,
 			);
 			target = C9CE8DFD2D89189200F87A36 /* RequiredTask2Tests */;
 		};

@@ -8,3 +8,11 @@
 class Engine {
     
 }
+
+final class ElectricEngine: Engine {
+    
+}
+
+final class HydrogenEngine: Engine {
+    
+}
