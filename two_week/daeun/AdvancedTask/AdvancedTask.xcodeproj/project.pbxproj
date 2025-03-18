@@ -20,11 +20,25 @@
 
 /* Begin PBXFileReference section */
 		C9CE8D322D88352E00F87A36 /* AdvancedTask */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdvancedTask; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9CE8DFE2D89189200F87A36 /* RequiredTask2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RequiredTask2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C9CE8E062D89190400F87A36 /* Exceptions for "AdvancedTask" folder in "RequiredTask2Tests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				RequiredTask2.swift,
+			);
+			target = C9CE8DFD2D89189200F87A36 /* RequiredTask2Tests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C9CE8D342D88352E00F87A36 /* AdvancedTask */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C9CE8E062D89190400F87A36 /* Exceptions for "AdvancedTask" folder in "RequiredTask2Tests" target */,
+			);
 			path = AdvancedTask;
 			sourceTree = "<group>";
 		};
@@ -32,6 +46,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		C9CE8D2F2D88352E00F87A36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9CE8DFB2D89189200F87A36 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				C9CE8D322D88352E00F87A36 /* AdvancedTask */,
+				C9CE8DFE2D89189200F87A36 /* RequiredTask2Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +104,25 @@
 			productReference = C9CE8D322D88352E00F87A36 /* AdvancedTask */;
 			productType = "com.apple.product-type.tool";
 		};
+		C9CE8DFD2D89189200F87A36 /* RequiredTask2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9CE8E022D89189200F87A36 /* Build configuration list for PBXNativeTarget "RequiredTask2Tests" */;
+			buildPhases = (
+				C9CE8DFA2D89189200F87A36 /* Sources */,
+				C9CE8DFB2D89189200F87A36 /* Frameworks */,
+				C9CE8DFC2D89189200F87A36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RequiredTask2Tests;
+			packageProductDependencies = (
+			);
+			productName = RequiredTask2Tests;
+			productReference = C9CE8DFE2D89189200F87A36 /* RequiredTask2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +134,9 @@
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					C9CE8D312D88352E00F87A36 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					C9CE8DFD2D89189200F87A36 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -112,12 +156,30 @@
 			projectRoot = "";
 			targets = (
 				C9CE8D312D88352E00F87A36 /* AdvancedTask */,
+				C9CE8DFD2D89189200F87A36 /* RequiredTask2Tests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		C9CE8DFC2D89189200F87A36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C9CE8D2E2D88352E00F87A36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9CE8DFA2D89189200F87A36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -267,6 +329,48 @@
 			};
 			name = Release;
 		};
+		C9CE8E032D89189200F87A36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YMLG3QVVWG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SpartaCamp.RequiredTask2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		C9CE8E042D89189200F87A36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YMLG3QVVWG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SpartaCamp.RequiredTask2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -284,6 +388,15 @@
 			buildConfigurations = (
 				C9CE8D3A2D88352E00F87A36 /* Debug */,
 				C9CE8D3B2D88352E00F87A36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9CE8E022D89189200F87A36 /* Build configuration list for PBXNativeTarget "RequiredTask2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9CE8E032D89189200F87A36 /* Debug */,
+				C9CE8E042D89189200F87A36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

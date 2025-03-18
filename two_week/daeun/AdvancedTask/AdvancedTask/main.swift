@@ -6,37 +6,13 @@
 //
 
 // 필수 문제 1
-testRequiredTask1()
+testCalculate()
 
 
 // 필수 문제 2
-let numbers = [1, 2, 3, 4, 5]
-
-var result = [String]()
-
-numbers.forEach { number in
-    result.append(String(number))
-}
-
-
-let input = [1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10]
-let output = input.filter { $0 % 2 == 0 }.map { String($0) }
-
-print(output)
-
-func myMap(_ array: [Int], _ convert: (Int) -> String) -> [String] {
-    var convertedArray: [String] = []
-    convertedArray.reserveCapacity(array.count)
-    array.forEach { convertedArray.append(convert($0)) }
-    return convertedArray
-}
-
-let myMapResult = myMap([1, 2, 3, 4, 5]) {
-    String($0)
-}
-
-print(myMapResult)
-
+testForInForEach()
+testHighOrderFunctionChaining()
+testCreateCustomHigherOrderFunction()
 
 // 필수 문제 3
 func a(_ array: [Int]) -> [Int] {

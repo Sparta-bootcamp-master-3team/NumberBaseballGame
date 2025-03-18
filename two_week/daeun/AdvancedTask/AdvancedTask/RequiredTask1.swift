@@ -12,7 +12,8 @@ func calculate(_ operate: (Int, Int) -> String) {
     print(operate(1, 2))
 }
 
-func testRequiredTask1() {
-    print("-- Required Task 1 --")
+func testCalculate() {
+    print("-- calculate(_:) --")
     calculate(sum)
+    print()
 }
