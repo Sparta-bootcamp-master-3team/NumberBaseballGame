@@ -79,3 +79,9 @@ func d<T: Numbers>(_ array: [T]) -> [T] {
         .filter{ $0.offset % 2 == 0}
         .map { $0.element }
 }
+
+
+// 도전 문제 1
+let myCar: HybridCar = .init(brand: "브랜드1", model: "모델1", year: "2025", engine: ElectricEngine())
+myCar.switchEngine(to: HydrogenEngine())
+print(myCar.engine)
