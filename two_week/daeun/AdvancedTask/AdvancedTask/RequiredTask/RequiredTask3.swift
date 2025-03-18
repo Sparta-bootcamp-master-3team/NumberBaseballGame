@@ -16,7 +16,7 @@ func testFilterEvenIndexedIntegers() {
             .map { $0.element }
     }
     
-    let input: [Int] = getValidArrayInput()
+    let input: [Int] = getValidArrayInput(reference: "정수 배열에서 짝수번째 요소가 필터링됩니다.")
     
     print("input: \(input)")
     print("output: \(a(input))")
@@ -33,10 +33,11 @@ func testFilterEvenIndexedStrings() {
             .map { $0.element }
     }
 
-    let input: [String] = getValidArrayInput()
+    let input: [String] = getValidArrayInput(reference: "문자열 배열에서 짝수번째 요소가 필터링됩니다.")
     
     print("input: \(input)")
     print("output: \(b(input))")
+    waitForEnter()
 }
 
 // MARK: c
@@ -50,13 +51,14 @@ func testFilterEvenIndexedGeneric() {
             .map { $0.element }
     }
     
-    let input1: [Int] = getValidArrayInput()
+    let input1: [Int] = getValidArrayInput(reference: "제네릭 함수를 통해 정수 배열에서 짝수번째 요소가 필터링됩니다.")
     print("input: \(input1)")
     print("output: \(c(input1))")
     
-    let input2: [String] = getValidArrayInput()
+    let input2: [String] = getValidArrayInput(reference: "제네릭 함수를 통해 문자열 배열에서 짝수번째 요소가 필터링됩니다.")
     print("input: \(input2)")
     print("output: \(c(input2))")
+    waitForEnter()
 }
 
 // MARK: d
@@ -94,4 +96,5 @@ func testFilterEvenIndexedNumbersOnly() {
     print("input: \(input.map { $0.stringValue })")
     print("output: \(d(input).map { $0.stringValue}) ")
     print()
+    waitForEnter()
 }
