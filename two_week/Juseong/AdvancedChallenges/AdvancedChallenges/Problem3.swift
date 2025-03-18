@@ -33,17 +33,13 @@ private func c<T>(_ inputs: [T]) -> [T] {
 private let numberResultC = c(numbers)
 private let stringResultC = c(strings)
 
-// MARK: 4. Numbers 프로토콜
-protocol Numbers { }
-extension Int: Numbers { }
-extension Double: Numbers { }
-
-private func d<T: Numbers>(_ inputs: [T]) -> [T] {
+// MARK: 4. Numeric 프로토콜
+private func d<T: Numeric>(_ inputs: [T]) -> [T] {
     inputs.indices.filter { $0 % 2 == 0 }.map { inputs[$0] }
 }
 
 private let numberResultD = d(numbers)
-//private let stringResultD = c(strings) // 에러 발생
+//private let stringResultD = d(strings) // 에러 발생
 private let doubleResultD = d(doubles)
 
 func problem3Result() {
