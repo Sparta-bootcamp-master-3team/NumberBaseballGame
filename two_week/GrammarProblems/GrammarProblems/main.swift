@@ -100,9 +100,17 @@ let resultD = d(something: inputNumbers)
 print(resultD)
 
 // MARK: Challenge Problem
-class Engine { }
-class ElectricEngine: Engine { }
-class HybridEngine: Engine { }
+class Engine {
+    func engineType() { print("가솔린") }
+}
+
+class ElectricEngine: Engine {
+    override func engineType() { print("전기") }
+}
+
+class HybridEngine: Engine {
+    override func engineType() { print("하이브리드") }
+}
 
 class Car {
     let brand: String
@@ -152,4 +160,7 @@ class HybridCar: Car {
 
 let myCar = HybridCar(brand: "KIA", model: "K5", year: "2015", engine: HybridEngine())
 myCar.drive()
+myCar.engine.engineType()
 
+myCar.switchEngine(to: ElectricEngine())
+myCar.engine.engineType()
