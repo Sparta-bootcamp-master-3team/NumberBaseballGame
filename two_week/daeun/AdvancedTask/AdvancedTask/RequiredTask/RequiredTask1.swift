@@ -15,5 +15,4 @@ func calculate(_ operate: (Int, Int) -> String) {
 func testCalculate() {
     print("-- calculate(_:) --")
     calculate(sum)
-    print()
 }

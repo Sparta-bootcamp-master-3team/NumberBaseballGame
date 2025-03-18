@@ -9,7 +9,7 @@
 func testForInForEach() {
     print("-- for-in ForEach --")
     
-    let numbers = [1, 2, 3, 4, 5]
+    let numbers: [Int] = getValidArrayInput()
     var forInResult: [String] = []
     var forEachResult: [String] = []
     
@@ -23,19 +23,17 @@ func testForInForEach() {
     
     print("for-in 결과: \(forInResult)")
     print("forEach 결과: \(forEachResult)")
-    print()
 }
 
 // MARK: higher order function
 func testHighOrderFunctionChaining() {
     print("-- Higher Order Function Chaining --")
     
-    let input = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    let input: [Int] = getValidArrayInput()
     let output = input.filter { $0 % 2 == 0 }.map { String($0) }
     
     print("input: \(input)")
     print("output: \(output)")
-    print()
 }
 
 // MARK: custom higher order function
@@ -50,11 +48,8 @@ func testCreateCustomHigherOrderFunction() {
         return convertedArray
     }
 
-    // 결과값
-    let myMapResult = myMap([1, 2, 3, 4, 5]) {
-        String($0)
-    }
+    let input: [Int] = getValidArrayInput()
+    let myMapResult = myMap(input) { String($0) }
     
     print("myMap result: \(myMapResult)")
-    print()
 }

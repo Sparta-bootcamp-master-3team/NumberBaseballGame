@@ -16,11 +16,10 @@ func testFilterEvenIndexedIntegers() {
             .map { $0.element }
     }
     
-    let input = [1, 2, 3, 4, 5]
+    let input: [Int] = getValidArrayInput()
     
     print("input: \(input)")
     print("output: \(a(input))")
-    print()
 }
 
 // MARK: b
@@ -34,11 +33,10 @@ func testFilterEvenIndexedStrings() {
             .map { $0.element }
     }
 
-    let input = ["가", "나", "다", "라", "마"]
+    let input: [String] = getValidArrayInput()
     
     print("input: \(input)")
     print("output: \(b(input))")
-    print()
 }
 
 // MARK: c
@@ -52,15 +50,13 @@ func testFilterEvenIndexedGeneric() {
             .map { $0.element }
     }
     
-    let input1 = [1, 2, 3, 4, 5]
+    let input1: [Int] = getValidArrayInput()
     print("input: \(input1)")
     print("output: \(c(input1))")
-    print()
     
-    let input2 = ["가", "나", "다", "라", "마"]
+    let input2: [String] = getValidArrayInput()
     print("input: \(input2)")
     print("output: \(c(input2))")
-    print()
 }
 
 // MARK: d
