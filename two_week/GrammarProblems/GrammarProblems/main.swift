@@ -43,3 +43,58 @@ func myMap(_ array: [Int], _ conversion: (Int) -> String) -> [String] {
 
 let myConversion = myMap(inputNumbers) { String($0) }
 print(myConversion)
+
+// MARK: P3
+func a(numbers: [Int]) -> [Int] {
+    var result = [Int]()
+    
+    for i in 0..<numbers.count {
+        i % 2 == 0 ? result.append(numbers[i]) : ()
+    }
+    
+    return result
+}
+
+let resultA = a(numbers: inputNumbers)
+print(resultA)
+
+func b(words: [String]) -> [String] {
+    var result = [String]()
+    
+    for i in 0..<words.count {
+        i % 2 == 0 ? result.append(words[i]) : ()
+    }
+    
+    return result
+}
+
+let resultB = b(words: inputWords)
+print(resultB)
+
+func c<T>(something: [T]) -> [T] {
+    var result = [T]()
+    
+    for i in 0..<something.count {
+        i % 2 == 0 ? result.append(something[i]) : ()
+    }
+    
+    return result
+}
+
+let resultCNumbers = c(something: inputNumbers)
+print(resultCNumbers)
+let resultCWords = c(something: inputWords)
+print(resultCWords)
+
+func d<T: Numeric>(something: [T]) -> [T] {
+    var result = [T]()
+    
+    for i in 0..<something.count {
+        i % 2 == 0 ? result.append(something[i]) : ()
+    }
+    
+    return result
+}
+
+let resultD = d(something: inputNumbers)
+print(resultD)
