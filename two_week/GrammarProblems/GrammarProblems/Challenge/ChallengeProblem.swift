@@ -34,19 +34,19 @@ class Car {
     }
     
     func drive() {
-        print("\(brand) \(model) 주행 중...")
+        print("\(brand) \(model) 주행 중..🚙")
     }
     
     func stop() {
-        print("\(brand) \(model) 멈춤")
+        print("\(brand) \(model) 멈춤🛑")
     }
     
     func charge() {
-        print("\(brand) \(model) 충전 중..")
+        print("\(brand) \(model) 충전 중..🔋")
     }
     
     func refuel() {
-        print("\(brand) \(model) 주유 중..")
+        print("\(brand) \(model) 주유 중..⛽️")
     }
 }
 
@@ -70,7 +70,9 @@ class HybridCar: Car {
 // Hybrid 인스턴스 생성
 let myCar = HybridCar(brand: "KIA", model: "K5", year: "2015", engine: HybridEngine())
 
+// Challenge Problem의 출력 함수
 func printChallengeProblem() {
+    print("\n-------도전 문제 🚘-------")
     myCar.drive()
     myCar.engine.engineType()
 

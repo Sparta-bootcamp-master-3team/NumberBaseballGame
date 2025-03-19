@@ -29,6 +29,7 @@ let myConversion = myMap(inputNumbers) { String($0) }
 
 // Problem2의 출력 함수
 func printProblem2() {
+    print("\n-------필수 문제 2️⃣-------")
     print(result)
     print(output)
     print(myConversion)

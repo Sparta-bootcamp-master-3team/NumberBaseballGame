@@ -18,6 +18,7 @@ func calculate(closure: (Int, Int) -> String) {
 
 // Problem1의 출력 함수
 func printProblem1() {
+    print("-------필수 문제 1️⃣-------")
     print(sum(10, 20))
     calculate(closure: sum)
 }

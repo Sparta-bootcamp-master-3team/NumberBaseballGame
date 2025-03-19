@@ -62,6 +62,7 @@ let resultD = d(something: inputNumbers)
 
 // Problem3의 출력 함수
 func printProblem3() {
+    print("\n-------필수 문제 3️⃣-------")
     print(resultA)
     print(resultB)
     print(resultCNumbers)
