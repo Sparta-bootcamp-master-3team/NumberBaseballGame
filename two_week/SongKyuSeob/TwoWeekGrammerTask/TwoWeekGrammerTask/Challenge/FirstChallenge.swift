@@ -30,6 +30,10 @@ class Car {
 }
 
 class ElectricCar: Car {
+    init(brand: String, model: String, modelYear: String, engine: ElectricEngine) {
+        super.init(brand: brand, model: model, modelYear: modelYear, engine: engine)
+    }
+    
     override func drive() {
         super.drive()
         print("전기차라 소음이 적네..")
@@ -37,6 +41,10 @@ class ElectricCar: Car {
 }
 
 class HybridCar: Car {
+    init(brand: String, model: String, modelYear: String, engine: HydrogenEngine) {
+        super.init(brand: brand, model: model, modelYear: modelYear, engine: engine)
+    }
+    
     func switchEngine(to: Engine) {
         self.engine = to
         
