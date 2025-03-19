@@ -14,6 +14,11 @@ protocol Numbers {
 class ThirdQuestion {
     
     func removeEvenNum(_ array: [Int]) -> [Int] {
+        guard !array.isEmpty else {
+            print("빈 배열이 입력되었습니다") // 빈 배열에 대한 예외 처리 1
+            return []
+        }
+        
         var result: [Int] = []
         
         for i in 1...array.count {
@@ -27,6 +32,11 @@ class ThirdQuestion {
     }
     
     func removeEvenString(_ array: [String]) -> [String] {
+        guard !array.isEmpty else {
+            print("빈 배열이 입력되었습니다") // 빈 배열에 대한 예외 처리 1
+            return []
+        }
+        
         var result: [String] = []
         
         for i in 1...array.count {
