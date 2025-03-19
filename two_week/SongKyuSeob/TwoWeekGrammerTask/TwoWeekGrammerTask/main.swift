@@ -28,17 +28,17 @@ print(thirdQuestion.removeEvenString(["가", "나", "다", "라", "마"]))
 print(thirdQuestion.removeEven([1,2,3,4,5,6,7]))
 print(thirdQuestion.removeEven(["가", "나", "다", "라", "마", "바", "사"]))
 
-let firstExample: [Number] = [
-    Number(num: 1),
-    Number(num: 3.5),
-    Number(num: 7),
-    Number(num: 6.6),
-    Number(num: 10.4),
-    Number(num: 3.14),
-]
+let intExample: [Int] = [ 1, 7, 5, 3, 9, 2 ]
+let filteredInts = thirdQuestion.removeEvenWithNumeric(intExample)
+print(filteredInts)
 
-let filteredNumbers = thirdQuestion.removeEvenWithNumbers(firstExample)
-thirdQuestion.printNumbers(numbers: filteredNumbers)
+let doubleExample: [Double] = [1.1, 7.14, 5.13, 3.14, 9.11, 2.164]
+let filteredDoubles = thirdQuestion.removeEvenWithNumeric(doubleExample)
+print(filteredDoubles)
+
+let floatExample: [Float] = [3.1, 1.1, 2.1, 5.1, 4.1, 9.1]
+let filteredFloats = thirdQuestion.removeEvenWithNumeric(floatExample)
+print(filteredFloats)
 
 // MARK: - 도전 문제 1
 

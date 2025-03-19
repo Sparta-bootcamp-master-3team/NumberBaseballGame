@@ -7,10 +7,6 @@
 
 import Foundation
 
-protocol Numbers {
-    var intValue: Int? { get }
-}
-
 class ThirdQuestion {
     
     func removeEvenNum(_ array: [Int]) -> [Int] {
@@ -72,7 +68,7 @@ class ThirdQuestion {
         return result
     }
     
-    func removeEvenWithNumbers<T: Numbers> (_ array: [T]) -> [T] {
+    func removeEvenWithNumeric<T: Numeric> (_ array: [T]) -> [T] {
         
         guard !array.isEmpty else {
             print("빈 배열이 입력되었습니다")
@@ -84,29 +80,6 @@ class ThirdQuestion {
         }
         
         return result
-    }
-    
-    func printNumbers(numbers: [Numbers]) {
-        let values = numbers.compactMap { $0.intValue }
-        
-        print(values)
-    }
-    
-}
-
-struct Number<T>: Numbers {
-    
-    var num: T?
-    
-    var intValue: Int? { // Float, Double의 실수도 정수로 반환
-        if let doubleValue = num as? Double {
-            return Int(doubleValue)
-        } else if let floatValue = num as? Float {
-            return Int(floatValue)
-        } else if let intValue = num as? Int {
-            return intValue
-        }
-        return nil // 그 외 String 같은 상황이 올 때 nil 반환 (예외 처리 2)
     }
     
 }
