@@ -7,22 +7,22 @@
 
 // MARK: for-in forEach
 func testForInForEach() {
-    print("-- for-in ForEach --")
+    print("-- for-in, map --")
     
-    let numbers: [Int] = getValidArrayInput(reference: "for-in과 forEach의 결과값이 같은지 검사합니다.")
+    let numbers: [Int] = getValidArrayInput(reference: "for-in과 map의 결과값이 같은지 검사합니다.")
     var forInResult: [String] = []
-    var forEachResult: [String] = []
+    var mapResult: [String] = []
     
     // for-in
     for number in numbers {
         forInResult.append(String(number))
     }
     
-    // forEach
-    numbers.forEach { forEachResult.append(String($0)) }
+    // map
+    mapResult = numbers.map { String($0) }
     
     print("for-in 결과: \(forInResult)")
-    print("forEach 결과: \(forEachResult)")
+    print("map 결과: \(mapResult)")
     waitForEnter()
 }
 

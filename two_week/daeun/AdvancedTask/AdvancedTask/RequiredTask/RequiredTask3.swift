@@ -65,36 +65,23 @@ func testFilterEvenIndexedGeneric() {
 func testFilterEvenIndexedNumbersOnly() {
     print("-- Filter Even Indexed Numbers Only --")
     
-    // Numbers protocol 정의
-    protocol Numbers {
-        var stringValue: String { get }
-    }
-    
-    // Numbers를 준수하는 샘플 열거형 정의
-    enum Roman: Numbers {
-        case one, two, three
-        
-        var stringValue: String {
-            switch self {
-            case .one: return "I"
-            case .two: return "II"
-            case .three: return "III"
-            }
-        }
-    }
-    
-    // 과제 구현부
-    func d<T: Numbers>(_ array: [T]) -> [T] {
+    func d<T: Numeric>(_ array: [T]) -> [T] {
         return array
             .enumerated()
             .filter{ $0.offset % 2 == 0}
             .map { $0.element }
     }
     
-    let input: [Roman] = [.one, .two, .three]
+    let integerInput: [Int] = getValidArrayInput()
     
-    print("input: \(input.map { $0.stringValue })")
-    print("output: \(d(input).map { $0.stringValue}) ")
+    print("input: \(integerInput)")
+    print("output: \(d(integerInput))")
+    
+    
+    let doubleInput: [Double] = getValidArrayInput(reference: "Numeric 제약을 확인합니다.")
+    print("input: \(doubleInput)")
+    print("output: \(d(doubleInput))")
+    
     print()
     waitForEnter()
 }
